@@ -1,0 +1,1363 @@
+hub EpiMapCustom
+shortLabel EpiMap release v0.9 (Custom TrackHub)
+longLabel Custom trackHub per mark and sample group tracks for EpiMap v0.9
+useOneFile on
+email cboix@mit.edu
+
+
+genome hg19
+
+track EpiMapBWSig
+compositeTrack on
+shortLabel All Signal Tracks
+longLabel All observed and imputed signal tracks from EpiMap
+group epimap
+subGroup1 view Views Sig=Signal
+subGroup2 sampleType Sample_Type BSS00121=body_of_pancreas_female_adult_(51_year) BSS00122=body_of_pancreas_female_adult_(53_years) BSS00123=body_of_pancreas_male_adult_(37_years) BSS00124=body_of_pancreas_male_adult_(54_years) BSS00758=islet_precursor_cell BSS01406=pancreas_female_adult_(30_years) BSS01407=pancreas_male_adult_(34_years)
+subGroup3 assayType Assay_Type  DNase-seq=DNase-seq H3K27ac=H3K27ac H3K27me3=H3K27me3 H3K4me1=H3K4me1 H3K9me3=H3K9me3 H3K36me3=H3K36me3 H3K4me3=H3K4me3
+subGroup4 dataType Data_Type Observed=Observed Imputed=Imputed
+subGroup5 donor Donor  ENCDO058AAA=ENCDO058AAA ENCDO424HVB=ENCDO424HVB ENCDO451RUA=ENCDO451RUA ENCDO845WKR=ENCDO845WKR ENCDO793LXB=ENCDO793LXB ENCDO271OUW=ENCDO271OUW ENCDO222AAA=ENCDO222AAA
+dimensions dimensionX=assayType dimensionY=sampleType dimA=dataType dimB=donor
+filterComposite on
+sortOrder cellType=+ assayType=+ donor=+
+dragAndDrop on
+visibility hide
+priority 21
+type bed 3
+noInherit on
+
+track EpiMapBWSigView
+shortLabel Signal
+view Sig
+maxHeightPixels 64:32:16
+parent EpiMapBWSig
+type bigWig
+visibility dense
+
+track BW_BSS00121_DNase-seq_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00121 DNase-seq body of pancreas female adult (51 year) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00121_DNase-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (51 year)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO271OUW"
+subGroups view=Sig sampleType=BSS00121 assayType=DNase-seq dataType=Imputed donor=ENCDO271OUW
+parent EpiMapBWSigView off
+
+track BW_BSS00121_H3K27me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00121 H3K27me3 body of pancreas female adult (51 year) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00121_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (51 year)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO271OUW"
+subGroups view=Sig sampleType=BSS00121 assayType=H3K27me3 dataType=Imputed donor=ENCDO271OUW
+parent EpiMapBWSigView off
+
+track BW_BSS00121_H3K27ac_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00121 H3K27ac body of pancreas female adult (51 year) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00121_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (51 year)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO271OUW"
+subGroups view=Sig sampleType=BSS00121 assayType=H3K27ac dataType=Imputed donor=ENCDO271OUW
+parent EpiMapBWSigView off
+
+track BW_BSS00121_DNase-seq_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00121 DNase-seq body of pancreas female adult (51 year) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_DNase-seq_BSS00121.sub_VS_Uniform_BKG_CONTROL_36_50000000.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (51 year)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO271OUW"
+subGroups view=Sig sampleType=BSS00121 assayType=DNase-seq dataType=Observed donor=ENCDO271OUW
+parent EpiMapBWSigView off
+
+track BW_BSS00121_H3K36me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00121 H3K36me3 body of pancreas female adult (51 year) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00121_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (51 year)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO271OUW"
+subGroups view=Sig sampleType=BSS00121 assayType=H3K36me3 dataType=Imputed donor=ENCDO271OUW
+parent EpiMapBWSigView off
+
+track BW_BSS00121_H3K4me1_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00121 H3K4me1 body of pancreas female adult (51 year) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00121_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (51 year)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO271OUW"
+subGroups view=Sig sampleType=BSS00121 assayType=H3K4me1 dataType=Imputed donor=ENCDO271OUW
+parent EpiMapBWSigView off
+
+track BW_BSS00121_H3K4me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00121 H3K4me3 body of pancreas female adult (51 year) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00121_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (51 year)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO271OUW"
+subGroups view=Sig sampleType=BSS00121 assayType=H3K4me3 dataType=Imputed donor=ENCDO271OUW
+parent EpiMapBWSigView off
+
+track BW_BSS00121_H3K9me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00121 H3K9me3 body of pancreas female adult (51 year) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00121_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (51 year)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO271OUW"
+subGroups view=Sig sampleType=BSS00121 assayType=H3K9me3 dataType=Imputed donor=ENCDO271OUW
+parent EpiMapBWSigView off
+
+track BW_BSS00122_DNase-seq_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00122 DNase-seq body of pancreas female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00122_DNase-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=DNase-seq dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00122_H3K27me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00122 H3K27me3 body of pancreas female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00122_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=H3K27me3 dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00122_H3K36me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00122 H3K36me3 body of pancreas female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00122_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=H3K36me3 dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00122_H3K4me1_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00122 H3K4me1 body of pancreas female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00122_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=H3K4me1 dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00122_H3K4me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00122 H3K4me3 body of pancreas female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00122_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=H3K4me3 dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00122_H3K9me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00122 H3K9me3 body of pancreas female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00122_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=H3K9me3 dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00122_H3K27ac_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00122 H3K27ac body of pancreas female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00122_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=H3K27ac dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00122_H3K27ac_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00122 H3K27ac body of pancreas female adult (53 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27ac_BSS00122.sub_VS_FINAL_WCE_BSS00122.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=H3K27ac dataType=Observed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00122_H3K27me3_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00122 H3K27me3 body of pancreas female adult (53 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27me3_BSS00122.sub_VS_FINAL_WCE_BSS00122.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=H3K27me3 dataType=Observed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00122_H3K4me1_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00122 H3K4me1 body of pancreas female adult (53 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me1_BSS00122.sub_VS_FINAL_WCE_BSS00122.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=H3K4me1 dataType=Observed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00122_DNase-seq_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00122 DNase-seq body of pancreas female adult (53 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_DNase-seq_BSS00122.sub_VS_Uniform_BKG_CONTROL_36_50000000.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=DNase-seq dataType=Observed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00122_H3K9me3_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00122 H3K9me3 body of pancreas female adult (53 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K9me3_BSS00122.sub_VS_FINAL_WCE_BSS00122.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas female adult (53 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS00122 assayType=H3K9me3 dataType=Observed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS00123_DNase-seq_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00123 DNase-seq body of pancreas male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00123_DNase-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=DNase-seq dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_DNase-seq_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00123 DNase-seq body of pancreas male adult (37 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_DNase-seq_BSS00123.sub_VS_Uniform_BKG_CONTROL_36_50000000.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=DNase-seq dataType=Observed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K27ac_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00123 H3K27ac body of pancreas male adult (37 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27ac_BSS00123.sub_VS_FINAL_WCE_BSS00123.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K27ac dataType=Observed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K27me3_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00123 H3K27me3 body of pancreas male adult (37 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27me3_BSS00123.sub_VS_FINAL_WCE_BSS00123.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K27me3 dataType=Observed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K4me1_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00123 H3K4me1 body of pancreas male adult (37 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me1_BSS00123.sub_VS_FINAL_WCE_BSS00123.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K4me1 dataType=Observed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K4me3_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00123 H3K4me3 body of pancreas male adult (37 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me3_BSS00123.sub_VS_FINAL_WCE_BSS00123.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K4me3 dataType=Observed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K27ac_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00123 H3K27ac body of pancreas male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00123_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K27ac dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K36me3_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00123 H3K36me3 body of pancreas male adult (37 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K36me3_BSS00123.sub_VS_FINAL_WCE_BSS00123.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K36me3 dataType=Observed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K4me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00123 H3K4me3 body of pancreas male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00123_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K4me3 dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K9me3_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00123 H3K9me3 body of pancreas male adult (37 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K9me3_BSS00123.sub_VS_FINAL_WCE_BSS00123.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K9me3 dataType=Observed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K27me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00123 H3K27me3 body of pancreas male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00123_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K27me3 dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K9me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00123 H3K9me3 body of pancreas male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00123_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K9me3 dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K36me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00123 H3K36me3 body of pancreas male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00123_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K36me3 dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00123_H3K4me1_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00123 H3K4me1 body of pancreas male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00123_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (37 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS00123 assayType=H3K4me1 dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K36me3_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00124 H3K36me3 body of pancreas male adult (54 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K36me3_BSS00124.sub_VS_FINAL_WCE_BSS00124.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K36me3 dataType=Observed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K4me1_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00124 H3K4me1 body of pancreas male adult (54 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me1_BSS00124.sub_VS_FINAL_WCE_BSS00124.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K4me1 dataType=Observed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K27me3_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00124 H3K27me3 body of pancreas male adult (54 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27me3_BSS00124.sub_VS_FINAL_WCE_BSS00124.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K27me3 dataType=Observed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_DNase-seq_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00124 DNase-seq body of pancreas male adult (54 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_DNase-seq_BSS00124.sub_VS_Uniform_BKG_CONTROL_36_50000000.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=DNase-seq dataType=Observed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K27ac_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00124 H3K27ac body of pancreas male adult (54 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27ac_BSS00124.sub_VS_FINAL_WCE_BSS00124.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K27ac dataType=Observed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_DNase-seq_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00124 DNase-seq body of pancreas male adult (54 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00124_DNase-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=DNase-seq dataType=Imputed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K4me3_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00124 H3K4me3 body of pancreas male adult (54 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me3_BSS00124.sub_VS_FINAL_WCE_BSS00124.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K4me3 dataType=Observed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K27me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00124 H3K27me3 body of pancreas male adult (54 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00124_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K27me3 dataType=Imputed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K36me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00124 H3K36me3 body of pancreas male adult (54 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00124_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K36me3 dataType=Imputed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K4me1_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00124 H3K4me1 body of pancreas male adult (54 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00124_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K4me1 dataType=Imputed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K4me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00124 H3K4me3 body of pancreas male adult (54 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00124_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K4me3 dataType=Imputed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K9me3_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00124 H3K9me3 body of pancreas male adult (54 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00124_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K9me3 dataType=Imputed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K9me3_Obs
+shortLabel Obs BODY OF PANCREAS
+longLabel BSS00124 H3K9me3 body of pancreas male adult (54 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K9me3_BSS00124.sub_VS_FINAL_WCE_BSS00124.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K9me3 dataType=Observed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00124_H3K27ac_Imp
+shortLabel Imp BODY OF PANCREAS
+longLabel BSS00124 H3K27ac body of pancreas male adult (54 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00124_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="BODY OF PANCREAS" "Epigenome FullName"="body of pancreas male adult (54 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO451RUA"
+subGroups view=Sig sampleType=BSS00124 assayType=H3K27ac dataType=Imputed donor=ENCDO451RUA
+parent EpiMapBWSigView off
+
+track BW_BSS00758_DNase-seq_Obs
+shortLabel Obs ISLET PRECURSOR CELL
+longLabel BSS00758 DNase-seq islet precursor cell (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_DNase-seq_BSS00758.sub_VS_Uniform_BKG_CONTROL_36_50000000.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="ISLET PRECURSOR CELL" "Epigenome FullName"="islet precursor cell" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="in vitro differentiated cells" "Sex"="female" "Donor"="ENCDO222AAA"
+subGroups view=Sig sampleType=BSS00758 assayType=DNase-seq dataType=Observed donor=ENCDO222AAA
+parent EpiMapBWSigView off
+
+track BW_BSS00758_H3K4me1_Imp
+shortLabel Imp ISLET PRECURSOR CELL
+longLabel BSS00758 H3K4me1 islet precursor cell (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00758_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="ISLET PRECURSOR CELL" "Epigenome FullName"="islet precursor cell" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="in vitro differentiated cells" "Sex"="female" "Donor"="ENCDO222AAA"
+subGroups view=Sig sampleType=BSS00758 assayType=H3K4me1 dataType=Imputed donor=ENCDO222AAA
+parent EpiMapBWSigView off
+
+track BW_BSS00758_H3K27ac_Imp
+shortLabel Imp ISLET PRECURSOR CELL
+longLabel BSS00758 H3K27ac islet precursor cell (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00758_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="ISLET PRECURSOR CELL" "Epigenome FullName"="islet precursor cell" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="in vitro differentiated cells" "Sex"="female" "Donor"="ENCDO222AAA"
+subGroups view=Sig sampleType=BSS00758 assayType=H3K27ac dataType=Imputed donor=ENCDO222AAA
+parent EpiMapBWSigView off
+
+track BW_BSS00758_H3K27me3_Imp
+shortLabel Imp ISLET PRECURSOR CELL
+longLabel BSS00758 H3K27me3 islet precursor cell (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00758_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="ISLET PRECURSOR CELL" "Epigenome FullName"="islet precursor cell" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="in vitro differentiated cells" "Sex"="female" "Donor"="ENCDO222AAA"
+subGroups view=Sig sampleType=BSS00758 assayType=H3K27me3 dataType=Imputed donor=ENCDO222AAA
+parent EpiMapBWSigView off
+
+track BW_BSS00758_H3K36me3_Imp
+shortLabel Imp ISLET PRECURSOR CELL
+longLabel BSS00758 H3K36me3 islet precursor cell (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00758_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="ISLET PRECURSOR CELL" "Epigenome FullName"="islet precursor cell" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="in vitro differentiated cells" "Sex"="female" "Donor"="ENCDO222AAA"
+subGroups view=Sig sampleType=BSS00758 assayType=H3K36me3 dataType=Imputed donor=ENCDO222AAA
+parent EpiMapBWSigView off
+
+track BW_BSS00758_H3K4me3_Imp
+shortLabel Imp ISLET PRECURSOR CELL
+longLabel BSS00758 H3K4me3 islet precursor cell (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00758_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="ISLET PRECURSOR CELL" "Epigenome FullName"="islet precursor cell" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="in vitro differentiated cells" "Sex"="female" "Donor"="ENCDO222AAA"
+subGroups view=Sig sampleType=BSS00758 assayType=H3K4me3 dataType=Imputed donor=ENCDO222AAA
+parent EpiMapBWSigView off
+
+track BW_BSS00758_H3K9me3_Imp
+shortLabel Imp ISLET PRECURSOR CELL
+longLabel BSS00758 H3K9me3 islet precursor cell (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS00758_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="ISLET PRECURSOR CELL" "Epigenome FullName"="islet precursor cell" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="in vitro differentiated cells" "Sex"="female" "Donor"="ENCDO222AAA"
+subGroups view=Sig sampleType=BSS00758 assayType=H3K9me3 dataType=Imputed donor=ENCDO222AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01406_DNase-seq_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01406 DNase-seq pancreas female adult (30 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01406_DNase-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=DNase-seq dataType=Imputed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K27ac_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01406 H3K27ac pancreas female adult (30 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01406_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K27ac dataType=Imputed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K36me3_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01406 H3K36me3 pancreas female adult (30 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01406_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K36me3 dataType=Imputed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K4me1_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01406 H3K4me1 pancreas female adult (30 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01406_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K4me1 dataType=Imputed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K27me3_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01406 H3K27me3 pancreas female adult (30 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01406_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K27me3 dataType=Imputed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_DNase-seq_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01406 DNase-seq pancreas female adult (30 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_DNase-seq_BSS01406.sub_VS_Uniform_BKG_CONTROL_36_50000000.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=DNase-seq dataType=Observed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K27ac_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01406 H3K27ac pancreas female adult (30 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27ac_BSS01406.sub_VS_FINAL_WCE_BSS01406.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K27ac dataType=Observed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K27me3_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01406 H3K27me3 pancreas female adult (30 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27me3_BSS01406.sub_VS_FINAL_WCE_BSS01406.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K27me3 dataType=Observed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K36me3_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01406 H3K36me3 pancreas female adult (30 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K36me3_BSS01406.sub_VS_FINAL_WCE_BSS01406.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K36me3 dataType=Observed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K4me1_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01406 H3K4me1 pancreas female adult (30 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me1_BSS01406.sub_VS_FINAL_WCE_BSS01406.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K4me1 dataType=Observed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K4me3_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01406 H3K4me3 pancreas female adult (30 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me3_BSS01406.sub_VS_FINAL_WCE_BSS01406.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K4me3 dataType=Observed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K9me3_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01406 H3K9me3 pancreas female adult (30 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K9me3_BSS01406.sub_VS_FINAL_WCE_BSS01406.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K9me3 dataType=Observed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K9me3_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01406 H3K9me3 pancreas female adult (30 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01406_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K9me3 dataType=Imputed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01406_H3K4me3_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01406 H3K4me3 pancreas female adult (30 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01406_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas female adult (30 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO424HVB"
+subGroups view=Sig sampleType=BSS01406 assayType=H3K4me3 dataType=Imputed donor=ENCDO424HVB
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K4me3_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01407 H3K4me3 pancreas male adult (34 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me3_BSS01407.sub_VS_FINAL_WCE_BSS01407.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K4me3 dataType=Observed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K9me3_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01407 H3K9me3 pancreas male adult (34 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K9me3_BSS01407.sub_VS_FINAL_WCE_BSS01407.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K9me3 dataType=Observed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K36me3_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01407 H3K36me3 pancreas male adult (34 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01407_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K36me3 dataType=Imputed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K4me1_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01407 H3K4me1 pancreas male adult (34 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01407_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K4me1 dataType=Imputed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K4me3_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01407 H3K4me3 pancreas male adult (34 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01407_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K4me3 dataType=Imputed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K9me3_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01407 H3K9me3 pancreas male adult (34 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01407_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K9me3 dataType=Imputed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K36me3_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01407 H3K36me3 pancreas male adult (34 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K36me3_BSS01407.sub_VS_FINAL_WCE_BSS01407.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K36me3 dataType=Observed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K4me1_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01407 H3K4me1 pancreas male adult (34 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me1_BSS01407.sub_VS_FINAL_WCE_BSS01407.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K4me1 dataType=Observed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_DNase-seq_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01407 DNase-seq pancreas male adult (34 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01407_DNase-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=DNase-seq dataType=Imputed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K27ac_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01407 H3K27ac pancreas male adult (34 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01407_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K27ac dataType=Imputed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K27me3_Imp
+shortLabel Imp PANCREAS
+longLabel BSS01407 H3K27me3 pancreas male adult (34 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01407_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K27me3 dataType=Imputed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K27me3_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01407 H3K27me3 pancreas male adult (34 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27me3_BSS01407.sub_VS_FINAL_WCE_BSS01407.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K27me3 dataType=Observed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_DNase-seq_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01407 DNase-seq pancreas male adult (34 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_DNase-seq_BSS01407.sub_VS_Uniform_BKG_CONTROL_36_50000000.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=DNase-seq dataType=Observed donor=ENCDO058AAA
+parent EpiMapBWSigView off
+
+track BW_BSS01407_H3K27ac_Obs
+shortLabel Obs PANCREAS
+longLabel BSS01407 H3K27ac pancreas male adult (34 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27ac_BSS01407.sub_VS_FINAL_WCE_BSS01407.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 135,163,225
+metadata "Epigenome ShortName"="PANCREAS" "Epigenome FullName"="pancreas male adult (34 years)" "Group"="<span style="color:#87A3E1">Pancreas</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO058AAA"
+subGroups view=Sig sampleType=BSS01407 assayType=H3K27ac dataType=Observed donor=ENCDO058AAA
+parent EpiMapBWSigView off
